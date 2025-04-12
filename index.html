@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Signal Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="trackbg">
+
+        <!-- Countdown Display -->
+        <div class="counter">
+            <div class="count"><h1>3</h1></div>
+        </div>
+
+        <!-- Car -->
+        <div class="moveimg">
+            <img class="moveing" src="images/car_6558035.png" alt="Car">
+        </div>
+
+        <!-- Signals Bottom Left -->
+        <div class="signalslgt">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+        </div>
+
+        <!-- Buttons Bottom Right -->
+        <div class="buttons">
+            <button class="startbtn" onclick="startPressed()">Start</button>
+            <button class="stopbtn" onclick="stopPressed()">Stop</button>
+        </div>
+
+    </div>
+
+    <script src="styles.js"></script>
+</body>
+</html>

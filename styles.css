@@ -1,0 +1,145 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trackbg{
+ 
+    background-image: url(images/kfo6_lglq_220301.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+.moveing{
+   width:220px;
+    height: 200px;
+    position: absolute;
+    top: 74.5%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+.counter{
+    position: absolute;
+    color: rgb(241, 46, 12);
+    top: 9%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trackbg {
+    background-image: url(images/kfo6_lglq_220301.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.moveing {
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 74.5%;
+    left: 2%;
+    transform: translateY(-50%);
+    transition: left 0.05s linear;
+}
+
+.counter {
+    position: absolute;
+    /* top: 1%; */
+    left: 45%;
+    transform: translateX(-50%);
+    color:rgb(248, 247, 245);
+    font-size: 3rem;
+    z-index: 5;
+}
+
+.counter.hidden {
+    display: none;
+}
+
+.signalslgt {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+.light {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: grey;
+    border: 1px solid gainsboro;
+}
+
+.red.active {
+    background-color: red;
+}
+
+.yellow.active {
+    background-color: yellow;
+}
+
+.green.active {
+    background-color: green;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .moveing {
+        width: 150px;
+    }
+
+    .buttons, .signalslgt {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .moveing {
+        width: 180px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .moveing {
+        width: 220px;
+    }
+}
